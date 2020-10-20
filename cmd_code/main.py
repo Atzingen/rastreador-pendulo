@@ -22,7 +22,7 @@ L_pixel = config['default']['L_pixel']
     program_description="Processa e identifica objetos para experimentos de cinemática",
     default_size=(600, 480),
     progress_regex=r"^Progress (\d+)$",
-    #image_dir='C:/Users/Gustavo/Desktop/pendulo/no_gui'
+    # image_dir='/Users/gustavo/Desktop/pendulo'
 )
 def main():
     parser = GooeyParser() 
