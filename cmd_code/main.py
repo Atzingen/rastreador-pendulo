@@ -2,6 +2,9 @@ import os
 import configparser
 from argparse import ArgumentParser
 from gooey import Gooey, GooeyParser
+import processar_video
+import set_filters
+import get_size
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -56,7 +59,13 @@ def main():
         default="Processar vídeo",
     )
     args = parser.parse_args()
-    print(args.acao, args.saida, args.acao)
+    print(args.acao, args.saida)
+    if args.acao == 'Processar vídeo':
+        processar_video.main()
+    elif args.acao == 'Ajuste Parâmetros':
+        set_filters.main()
+    elif args.acao == 'Ajuste tamanho':
+        get_size.main()
 
 if __name__ == '__main__':
     main()
